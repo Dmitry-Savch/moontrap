@@ -1,0 +1,1798 @@
+:root {
+  --header-bg-color: #111;
+  --primary-color: #1e90ff;
+  --secondary-color: #f0f0f0;
+  --text-color: #333;
+  --text-color-secondary: #fff;
+  --background-color: #303030;
+  --background-secondary-color: #1b1b1b;
+  --font-family: "Fira Sans", sans-serif;
+  --font-size: 16px;
+  --line-height: 1.5;
+}
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: var(--font-family);
+  color: #fff;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background-color: var(--header-bg-color);
+  color: var(--text-color-secondary);
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+}
+
+.logo h1 {
+  font-size: 20px;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.burger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--text-color-secondary);
+}
+
+/* Desktop Navigation */
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: var(--text-color-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
+.nav-link {
+  margin: 0 10px;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('./images/title-img.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  padding: 60px 20px;
+}
+
+.hero-content {
+
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 800px;
+}
+
+.main-title-text {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: var(--text-color-secondary);
+  margin-bottom: 20px;
+}
+
+.main-subtitle-text {
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: var(--text-color-secondary);
+  line-height: 1.6;
+}
+
+/* About Section */
+.about {
+  background-color: var(--background-color);
+  padding: 60px 0;
+}
+
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.about-title {
+  margin-bottom: 40px;
+  max-width: 900px;
+}
+
+.about-title-text {
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+}
+
+.about-subtitle-text {
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.about-img-container {
+  display: flex;
+  gap: 40px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about-img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Game Section */
+.game {
+  background-color: var(--background-secondary-color);
+  padding: 60px 0;
+}
+
+.game-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+.game-title {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: 900px;
+}
+
+.game-title-text {
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+}
+
+.game-subtitle-text {
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+/* Answer Section */
+.answer {
+  background-color: var(--background-color);
+  padding: 60px 0;
+}
+
+.answer-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background-secondary-color);
+  border-radius: 20px;
+  padding: 30px 20px;
+  text-align: center;
+  gap: 30px;
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+.card-description {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Colonne Section */
+.colonne {
+  background-color: var(--background-secondary-color);
+  padding: 60px 0;
+}
+
+.colonne-wrapper {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.colonne-title {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--header-bg-color);
+  padding: 40px 0 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-logo img {
+  height: 40px;
+  width: 40px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.social-link {
+  transition: color 0.2s;
+}
+
+.social-link:hover {
+  color: var(--primary-color);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+  .main-title-text {
+    font-size: 2.5rem;
+  }
+
+  .about-title-text,
+  .game-title-text {
+    font-size: 2rem;
+  }
+
+  .about-subtitle-text,
+  .game-subtitle-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 890px) {
+  .burger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-top: 15px;
+    padding: 15px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  #menu-toggle:checked~.nav-links {
+    display: flex;
+  }
+
+  .hero {
+    min-height: 450px;
+  }
+
+  .main-title-text {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+
+  .main-subtitle-text {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+
+  .about-title-text,
+  .game-title-text {
+    font-size: 1.75rem;
+    letter-spacing: 2px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links,
+  .footer-social {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    padding: 25px 15px;
+  }
+
+  .main-title-text {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  .about-title-text,
+  .game-title-text {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  .about-subtitle-text,
+  .game-subtitle-text,
+  .card-description {
+    font-size: 0.9rem;
+  }
+
+  .colonne-title {
+    font-size: 1.2rem;
+  }
+
+  .card {
+    padding: 20px 15px;
+  }
+}
+
+
+
+/*contact start */
+.contact {
+  background-color: var(--background-color);
+  padding: 80px 0;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.contact-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  width: 100%;
+  margin-top: 30px;
+}
+.contact-button{
+  background-color: var(--primary-color);
+  color: var(--text-color-secondary);
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 5px 15px rgba(30, 144, 255, 0.4);
+}
+
+.input-name {
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.input-email {
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.input-text {
+  border: 2px solid black;
+  padding: 10px;
+  resize: none;
+  max-width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+
+.contact-text {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-social {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.social-link {
+  width: 40px;
+  height: auto;
+
+}
+
+.social-link img {
+  width: 100%;
+  height: auto;
+
+}
+
+/*contact end */
+/*footer start */
+
+.foter-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.politic-link {
+  text-decoration: underline;
+}
+
+.trems-link {
+  text-decoration: underline;
+}
+
+/*footer end */
+
+/*politic start */
+
+.politic {
+  background-color: var(--background-secondary-color);
+  color: var(--text-color-secondary);
+}
+
+.politic-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 0;
+  gap: 20px;
+
+}
+
+.politic-title {
+  font-size: 25px;
+}
+
+.politic-subtitle {
+  font-size: 20px;
+}
+
+/*politic end */
+/*trems start */
+
+.trems {
+  padding: 50px 150px;
+  background-color: var(--background-secondary-color);
+}
+
+.trems-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .trems {
+    padding: 20px 60px;
+
+  }
+
+  .politic-title {
+    font-size: 20px;
+  }
+
+  .politic-subtitle {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .trems {
+    padding: 20px 60px;
+
+  }
+
+  .politic-title {
+    font-size: 18px;
+  }
+
+  .politic-subtitle {
+    font-size: 16px;
+  }
+}
+
+/*trems end */
+
+
+
+/*footer end */
+
+/* STORY PAGE STYLES */
+
+/* Story Hero Section */
+.story-hero {
+  background-image: url('./images/story-bg-main.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.story-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.story-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 40px;
+  max-width: 800px;
+}
+
+.story-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: var(--text-color-secondary);
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Story Intro Section */
+.story-intro {
+  background-color: var(--background-secondary-color);
+  padding: 80px 0;
+}
+
+.story-intro-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.story-intro-content {
+  max-width: 900px;
+}
+
+/* Story Journey Section */
+.story-journey {
+  background-color: var(--background-color);
+  padding: 80px 0;
+}
+
+.story-journey-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.story-journey-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Story World Section */
+.story-world {
+  background-color: var(--background-secondary-color);
+  padding: 80px 0;
+}
+
+.story-world-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.story-world-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Story Mystery Section */
+.story-mystery {
+  background-color: var(--background-color);
+  padding: 80px 0;
+}
+
+.story-mystery-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.story-mystery-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Story Legends Section */
+.story-legends {
+  background-color: var(--background-secondary-color);
+  padding: 80px 0;
+}
+
+.story-legends-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.story-legends-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Story Reflection Section */
+.story-reflection {
+  background-color: var(--background-color);
+  padding: 80px 0;
+}
+
+.story-reflection-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.story-reflection-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Story CTA Section */
+.story-cta {
+  background-color: var(--background-secondary-color);
+  padding: 80px 0;
+}
+
+.story-cta-wrapper {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.story-cta-text {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Story Cards Section */
+.story-cards {
+  background-color: var(--background-color);
+  padding: 80px 0;
+}
+
+.story-cards-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.story-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background-secondary-color);
+  border-radius: 20px;
+  padding: 30px 20px;
+  text-align: center;
+  gap: 30px;
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.story-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.story-card-img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+  height: 200px;
+}
+
+.story-card-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Common Story Elements */
+.story-heading {
+  font-size: 2.8rem;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.story-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.story-image-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.story-figure {
+  text-align: center;
+  width: 100%;
+  max-width: 700px;
+}
+
+.story-image {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.story-caption {
+  color: var(--text-color-secondary);
+  margin-top: 15px;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* Media Queries for Story Page */
+@media (max-width: 1024px) {
+  .story-title {
+    font-size: 3rem;
+  }
+
+  .story-heading {
+    font-size: 2.3rem;
+  }
+
+  .story-text {
+    font-size: 1.1rem;
+  }
+
+  .story-cta-text {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .story-hero {
+    min-height: 450px;
+  }
+
+  .story-title {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+
+  .story-heading {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+
+  .story-text {
+    font-size: 1rem;
+  }
+
+  .story-cta-text {
+    font-size: 1.4rem;
+  }
+
+  .story-intro,
+  .story-journey,
+  .story-world,
+  .story-mystery,
+  .story-legends,
+  .story-reflection,
+  .story-cta,
+  .story-cards {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .story-hero {
+    min-height: 350px;
+  }
+
+  .story-hero-content {
+    padding: 25px 15px;
+  }
+
+  .story-title {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
+  .story-heading {
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+  }
+
+  .story-text {
+    font-size: 0.95rem;
+  }
+
+  .story-cta-text {
+    font-size: 1.2rem;
+  }
+
+  .story-card {
+    padding: 20px 15px;
+  }
+
+  .story-card-text {
+    font-size: 0.95rem;
+  }
+
+  .story-caption {
+    font-size: 0.9rem;
+  }
+}
+
+/* Gameplay Hero Section */
+.gameplay-hero {
+  background-image: url("./images/game-bg.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.gameplay-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.gameplay-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 40px;
+  max-width: 800px;
+}
+
+.gameplay-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: var(--text-color-secondary);
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Adding the new gameplay page styles to the existing CSS file */
+
+/* Gameplay Hero Section */
+.gameplay-hero {
+  background-image: url("./images/game-bg.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.gameplay-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.gameplay-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 40px;
+  max-width: 800px;
+}
+
+.gameplay-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: var(--text-color-secondary);
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Gameplay Intro Section */
+.gameplay-intro {
+  background-color: var(--background-secondary-color);
+  padding: 80px 0;
+}
+
+.gameplay-intro-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.gameplay-intro-content {
+  max-width: 900px;
+}
+
+/* Gameplay Basics Section */
+.gameplay-basics {
+  background-color: var(--background-color);
+  padding: 80px 0;
+}
+
+.gameplay-basics-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.gameplay-basics-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Gameplay Tips Section */
+.gameplay-tips {
+  background-color: var(--background-secondary-color);
+  padding: 80px 0;
+}
+
+.gameplay-tips-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.gameplay-tips-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Gameplay Difficult Section */
+.gameplay-difficult {
+  background-color: var(--background-color);
+  padding: 80px 0;
+}
+
+.gameplay-difficult-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.gameplay-difficult-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Gameplay Finale Section */
+.gameplay-finale {
+  background-color: var(--background-secondary-color);
+  padding: 80px 0;
+}
+
+.gameplay-finale-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.gameplay-finale-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Gameplay Additional Section */
+.gameplay-additional {
+  background-color: var(--background-color);
+  padding: 80px 0;
+}
+
+.gameplay-additional-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.gameplay-additional-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Gameplay CTA Section */
+.gameplay-cta {
+  background-color: var(--background-secondary-color);
+  padding: 80px 0;
+}
+
+.gameplay-cta-wrapper {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.gameplay-cta-text {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.gameplay-download-btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(30, 144, 255, 0.4);
+}
+
+.gameplay-download-btn:hover {
+  background-color: #0066cc;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(30, 144, 255, 0.6);
+}
+
+/* Gameplay Cards Section */
+.gameplay-cards {
+  background-color: var(--background-color);
+  padding: 80px 0;
+}
+
+.gameplay-cards-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.gameplay-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background-secondary-color);
+  border-radius: 20px;
+  padding: 30px 20px;
+  text-align: center;
+  gap: 30px;
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.gameplay-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.gameplay-card-img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+  height: 200px;
+}
+
+.gameplay-card-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Common Gameplay Elements */
+.gameplay-heading {
+  font-size: 2.8rem;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.gameplay-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.gameplay-image-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.gameplay-figure {
+  text-align: center;
+  width: 100%;
+  max-width: 700px;
+}
+
+.gameplay-image {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.gameplay-caption {
+  color: var(--text-color-secondary);
+  margin-top: 15px;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* Media Queries for Gameplay Page */
+@media (max-width: 1024px) {
+  .gameplay-title {
+    font-size: 3rem;
+  }
+
+  .gameplay-heading {
+    font-size: 2.3rem;
+  }
+
+  .gameplay-text {
+    font-size: 1.1rem;
+  }
+
+  .gameplay-cta-text {
+    font-size: 1.6rem;
+  }
+
+  .gameplay-download-btn {
+    font-size: 1.1rem;
+    padding: 12px 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gameplay-hero {
+    min-height: 450px;
+  }
+
+  .gameplay-title {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+
+  .gameplay-heading {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+
+  .gameplay-text {
+    font-size: 1rem;
+  }
+
+  .gameplay-cta-text {
+    font-size: 1.4rem;
+  }
+
+  .gameplay-download-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .gameplay-intro,
+  .gameplay-basics,
+  .gameplay-tips,
+  .gameplay-difficult,
+  .gameplay-finale,
+  .gameplay-additional,
+  .gameplay-cta,
+  .gameplay-cards {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .gameplay-hero {
+    min-height: 350px;
+  }
+
+  .gameplay-hero-content {
+    padding: 25px 15px;
+  }
+
+  .gameplay-title {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
+  .gameplay-heading {
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+  }
+
+  .gameplay-text {
+    font-size: 0.95rem;
+  }
+
+  .gameplay-cta-text {
+    font-size: 1.2rem;
+  }
+
+  .gameplay-download-btn {
+    font-size: 0.9rem;
+    padding: 8px 18px;
+  }
+
+  .gameplay-card {
+    padding: 20px 15px;
+  }
+
+  .gameplay-card-text {
+    font-size: 0.95rem;
+  }
+
+  .gameplay-caption {
+    font-size: 0.9rem;
+  }
+}
+
+/*about us */
+/* Adding About Us page minimal styles to the existing CSS file */
+ 
+ /* About Us Hero Section - Minimal */
+ .about-us-hero-minimal {
+  background: linear-gradient(135deg, #1a1a1a 0%, #303030 100%);
+  padding: 120px 0 80px;
+  text-align: center;
+}
+
+.about-us-hero-content-minimal {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.about-us-title-minimal {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: var(--text-color-secondary);
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.about-us-title-line {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+  margin: 0 auto 30px;
+}
+
+.about-us-subtitle-minimal {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--text-color-secondary);
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* About Us Intro Section - Minimal */
+.about-us-intro-minimal {
+  background-color: var(--background-secondary-color);
+  padding: 80px 0;
+}
+
+.about-us-intro-wrapper-minimal {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-us-intro-content-minimal {
+  text-align: center;
+}
+
+.about-us-heading-minimal {
+  font-size: 2.8rem;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.about-us-heading-accent {
+  width: 80px;
+  height: 4px;
+  background: var(--primary-color);
+  margin: 0 auto 40px;
+  position: relative;
+}
+
+.about-us-heading-accent::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 4px;
+  background: var(--primary-color);
+  left: -30px;
+  opacity: 0.5;
+}
+
+.about-us-heading-accent::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 4px;
+  background: var(--primary-color);
+  right: -30px;
+  opacity: 0.5;
+}
+
+.about-us-heading-accent-light {
+  background: var(--text-color-secondary);
+}
+
+.about-us-heading-accent-light::before,
+.about-us-heading-accent-light::after {
+  background: var(--text-color-secondary);
+}
+
+.about-us-text-minimal {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+/* About Us Mission Section - Minimal */
+.about-us-mission-minimal {
+  background-color: var(--background-color);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-us-mission-minimal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(30, 144, 255, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
+  pointer-events: none;
+}
+
+.about-us-mission-banner-minimal {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.about-us-mission-wrapper-minimal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-us-mission-card-minimal {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.about-us-mission-card-minimal:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-color: rgba(30, 144, 255, 0.3);
+}
+
+.about-us-mission-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* About Us Team Section - Minimal */
+.about-us-team-minimal {
+  background-color: var(--background-secondary-color);
+  padding: 80px 0;
+}
+
+.about-us-team-header-minimal {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-us-subheading-minimal {
+  font-size: 1.3rem;
+  color: var(--text-color-secondary);
+  margin-top: 15px;
+  text-align: center;
+}
+
+.about-us-team-content-minimal {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-us-team-description-minimal {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.about-us-team-roles-minimal {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.about-us-team-role-minimal {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-us-team-role-minimal:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-color: rgba(30, 144, 255, 0.3);
+}
+
+.about-us-role-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.about-us-role-title-minimal {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.about-us-role-desc-minimal {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+
+/* Media Queries for About Us Page - Minimal */
+@media (max-width: 1024px) {
+  .about-us-title-minimal {
+    font-size: 3rem;
+  }
+
+  .about-us-subtitle-minimal {
+    font-size: 1.3rem;
+  }
+
+  .about-us-heading-minimal {
+    font-size: 2.3rem;
+  }
+
+  .about-us-text-minimal {
+    font-size: 1.1rem;
+  }
+
+  .about-us-cta-text-minimal {
+    font-size: 1.6rem;
+  }
+
+  .about-us-mission-wrapper-minimal {
+    grid-template-columns: 1fr;
+  }
+
+  .about-us-values-grid-minimal {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-us-hero-minimal {
+    padding: 80px 0 60px;
+  }
+
+  .about-us-title-minimal {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+
+  .about-us-subtitle-minimal {
+    font-size: 1.2rem;
+  }
+
+  .about-us-heading-minimal {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+
+  .about-us-text-minimal {
+    font-size: 1rem;
+  }
+
+  .about-us-cta-text-minimal {
+    font-size: 1.4rem;
+  }
+
+  .about-us-team-roles-minimal {
+    grid-template-columns: 1fr;
+  }
+
+  .about-us-quote-text {
+    font-size: 1.2rem;
+    padding: 0 20px;
+  }
+
+  .timeline-content {
+    width: 80%;
+    margin-left: 0;
+    margin-top: 30px;
+  }
+
+  .timeline-item:nth-child(even) .timeline-content {
+    margin-right: 0;
+  }
+
+  .about-us-future-timeline::before {
+    left: 20px;
+  }
+
+  .timeline-marker {
+    left: 20px;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-us-hero-minimal {
+    padding: 60px 0 40px;
+  }
+
+  .about-us-title-minimal {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
+  .about-us-subtitle-minimal {
+    font-size: 1rem;
+  }
+
+  .about-us-heading-minimal {
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+  }
+
+  .about-us-text-minimal {
+    font-size: 0.95rem;
+  }
+
+  .about-us-cta-text-minimal {
+    font-size: 1.2rem;
+  }
+
+  .about-us-value-title-minimal {
+    font-size: 1.3rem;
+  }
+
+  .about-us-value-text-minimal {
+    font-size: 0.95rem;
+  }
+
+  .about-us-cta-btn-minimal {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+
+  .about-us-studio-quote {
+    padding: 30px 15px;
+  }
+
+  .quote-mark {
+    font-size: 3rem;
+  }
+
+  .about-us-quote-text {
+    font-size: 1.1rem;
+    padding: 0 15px;
+  }
+}
